@@ -1,0 +1,206 @@
+/*Ce fichier css défini les paramètres communs à toutes les pages*/
+
+/*SOMMAIRE :
+1/ Paramètres de taille de ma page
+2/ En-tête et barre de navigation
+3/ Pied de page
+4/ Media queries
+
+/* //PARAMETRES BODY// */
+body {
+    max-height: 100%;
+    max-width: 100%;
+}
+
+/* //EN-TETE ET BARRE DE NAVIGATION// */
+/*Je créé mon en-tête avec ma barre de navigation de manière à ce 
+qu'elle soit presque transparente et je définie les paramètres de police
+communs à mon en-tête entière*/
+header {
+    display: flex;
+    flex-direction: row;
+    font-family: Oswald, sans-serif;
+    background-color: rgb(255, 255, 255,0.2);
+    position: relative;
+    width: auto;
+    height: 70px;
+}
+
+/*Je positionne mes éléments de manière à ce qu'ils soient alignés de chaque côté de ma page*/
+.navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 15px;
+}
+
+/*Je positionne ensuite mon image afin qu'elle soit en-dessous de ma barre de navigation*/
+.background {
+    position: absolute;
+    margin-top: -20px; /*Permet d'afficher l'image sous la barre de navigation*/
+    z-index: -1; /*Permet avec position absolute de fixer l'image à l'arrière plan derrière la barre de navigation*/
+    object-fit: cover; /*Permet de ne pas déformer l'image quand la taille de l'écran évolue*/
+    width: 100%;
+}
+
+/*Je redimensionne mon logo et le place*/
+.logo {
+    max-width: 70px;
+    padding-left: 100px;
+    object-fit: cover;/*Permet de ne pas déformer l'image quand la taille de l'écran évolue*/
+}
+
+/*Je change la taille du nom de mon site*/
+header p {
+    font-size: 36px;
+    padding-top: 5px;
+}
+
+/*J'organise ma liste de navigation afin qu'elle soit sur la même ligne et joliement
+espacée pour plus de cohérence*/
+header ul {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+    padding-top: 15px;
+    padding-right: 100px;
+    font-size: 24px;
+}
+
+/*J'enlève l'underline des liens entre mes pages et la couleur bleue*/
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+/*J'organise ma barre de recherche et la mets en forme*/
+.barre-recherche {
+    display: flex;
+    flex-direction: row;
+    gap: 7px;
+    align-items: center;
+}
+
+header textarea {
+    width: 253px;
+    height: 28px;
+}
+
+header button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Je redimensionne mon icon afin qu'il ne dépasse pas de mon bouton*/
+header button img {
+    object-fit: cover;
+    max-width: 25px;
+}
+
+/* //PIED DE PAGE// */
+
+/*Je mets en forme le piede de page en centrant mes liens
+ (non reliés à d'autre page sauf les liens de réseaux sociaux)*/
+footer {
+    display: flex;
+    flex-direction: row;
+    background-color: #CD1818;
+    padding: 20px;
+    justify-content: center;
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+/* //MEDIA QUERIES TABLETTES// */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .logo {
+        padding-left: 20px;
+        max-width: 60px;
+    }
+
+    header p {
+        font-size: 28px;
+    }
+
+    header ul {
+        gap: 30px;
+        padding-right: 30px;
+        font-size: 20px;
+    }
+
+    header textarea {
+        width: 200px;
+    }
+
+    footer ul {
+        gap: 30px;
+        font-size: 14px;
+    }
+}
+
+/* //MEDIA QUERIES TELEPHONES// */
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        align-items: center;
+        text-align: center;
+    }
+
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        padding-left: 0;
+    }
+
+    .logo {
+        padding-left: 0;
+        max-width: 50px;
+        margin-bottom: 10px;
+    }
+
+    header p {
+        font-size: 24px;
+        padding-top: 10px;
+    }
+
+    header ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+        font-size: 18px;
+    }
+
+    .barre-recherche {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 10px;
+    }
+
+    header textarea {
+        width: 180px;
+    }
+
+    footer ul {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 14px;
+        text-align: center;
+    }
+}

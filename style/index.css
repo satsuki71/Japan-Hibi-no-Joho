@@ -1,0 +1,240 @@
+/* SOMMAIRE : 
+1/ Mise en page box d'acceuil
+2/ Mise en page formulaire
+3/ Media queries tablettes
+4/ Media queries téléphones*/
+
+/* //BOX D'ACCEUIL// */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 250px;
+    width: 100%;
+    height: 100%;
+}
+
+/*Je créé mon encadré central que je laisse en partie 
+en transparence afin que l'on voit l'image en-dessous.*/
+.box-acceuil {
+    border-radius: 5px;
+    background-color: rgba(217,217,217,0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1033px;
+    height: 464px;
+    padding-top: 50px;
+    padding-left: 68px;
+    padding-right: 68px;
+}
+
+/*Je mets en forme mon titre*/
+.box-acceuil h1 {
+    text-align: center;
+    font-family: Oswald, sans-serif;
+    font-size: 64px;
+    padding-bottom: 70px;
+    max-width: 1033px;
+}
+
+/*Je mets en forme mes boutons*/
+.boutons {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+.bouton-article,
+.bouton-news {
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.4);
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+/*J'enlève l'underline et la couleur bleue de mes liens*/
+.boutons a {
+    color: black;
+    text-decoration: none;
+}
+
+/*Je fonce les boutons quand la souris passe au dessus. Je le fais séparément 
+et pas avec .bouton sinon les 2 boutons se foncent quand la souris passe au 
+dessus d'un.*/
+.bouton-article:hover {
+    background-color: #D9D9D9;
+}
+
+.bouton-news:hover {
+    background-color: #D9D9D9;
+}
+
+
+/* //FORMULAIRE// */
+.box-news {
+    border-radius: 5px;
+    background-color: rgba(217,217,217,0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    max-width: 1033px;
+    height: 464px;
+    gap: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/*Je modifie la police et la mise en page du titre*/
+.box-news h1 {
+    text-align: center;
+    font-family: Oswald;
+    font-size: 40px;
+    padding: 60px;
+    padding-bottom: 0px;
+    padding-top: 15px;
+}
+
+/*Je modifie la police de mon formulaire*/
+.nom-prenom,
+.mail,
+fieldset {
+    font-family: Oswald;
+    font-size: 20px;
+}
+
+/*Je modifie la taille des cases à remplir de mon formulaire*/
+.nom-prenom input {
+    max-width: 242px;
+    height: 30px;
+}
+
+.mail input {
+    max-width: 500px;
+    height: 30px;
+}
+
+/*Je mets en forme mes cases à cocher*/
+fieldset {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-bottom: 10px;
+    justify-content: center;
+    border: 1px solid black;
+}
+
+/*Je mets en forme mon bouton d'envoi*/
+button {
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.4);
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: rgba(255,255,255,0.4);
+}
+
+button:hover {
+    background-color: #D9D9D9
+}
+
+.background-news {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-news {
+    position: static;
+    bottom: 0;
+    z-index: -1; /*Permet avec position absolute de fixer l'image à l'arrière plan derrière la barre de navigation*/
+    margin-top: -350px;
+    object-fit: cover; /*Permet de ne pas déformer l'image quand la taille de l'écran évolue*/
+    width: 100%;
+}
+
+
+/* //MEDIA QUERIES TABLETTES// */
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .box-acceuil h1 {
+        font-size: 36px;
+    }
+  
+    .bouton-article,
+    .bouton-news {
+        width: 100%;
+    }
+  
+    .box-news h1 {
+        font-size: 28px;
+    }
+
+    .nom-prenom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-news {
+        margin-bottom: 300px;
+        height: auto;
+    }
+
+    .nom-prenom,
+    .mail,
+    fieldset {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+}
+  
+/* //MEDIA QUERIES TELEPHONES// */
+@media screen and (max-width: 600px) {
+    .box-acceuil h1 {
+        font-size: 28px;
+    }
+  
+    .boutons {
+        flex-direction: column;
+        gap: 15px;
+    }
+  
+    .box-news h1 {
+        font-size: 24px;
+    }
+
+    .nom-prenom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .box-news {
+        margin-bottom: 200px;
+        height: auto;
+    }
+
+    .nom-prenom,
+    .mail,
+    fieldset {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 16px;
+    }
+}

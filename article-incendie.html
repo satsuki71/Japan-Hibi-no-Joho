@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Japan Hibi no Joho</title>
+    <link rel="stylesheet" href="style/reset.css"><!--Je lie un fichier css qui me permet de reset tous les paramètres de mise en page que le navigateur affiche automatiquement-->
+    <link rel="stylesheet" href="style/style.css"><!--J'ai une fiche de style générale à tous le site-->
+    <link rel="stylesheet" href="style/article-incendie.css"><!--Et une fiche de style par page pour diférencier le css de chaque page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--J'importe une police-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <!--En-tête/barre de navigation : le but est d'avoir une barre de navigation avec une barre de recherche-->
+                <img src="image/sans-fond/logo-ss-fond.png" alt="Logo JHJ" class="logo">
+                <div class="navigation">
+                    <p>Japan Hibi no Joho<p> <!--Hibi no Joho  signifie Informations journalières-->
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Acceuil</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li>
+                                <form class="barre-recherche"><!--Ma barre de recherche avec bouton d'envoi des informations-->
+                                <textarea id="recherche" name="recherche" placeholder="Rechercher"></textarea>
+                                <button type="submit"><img src="image/sans-fond/chercher.svg" alt="Logo rechercher"></button>
+                                </from>
+                     
+                            </li>
+                         </ul>
+                    </nav>
+                </div>
+        <!--Ici je veux que l'image soit à cheval entre la barre de navigation et le main, c'est pourquoi je l'ai mise
+         dans mon header (afin qu'elle commence dans ma barre de navigation)-->
+        <img src="image/head-articles.jpeg" alt="Photo Mont Fuji" class="background">
+    </header>
+    
+    <main>
+        <div class="article"><!--J'intègre mon article avec des sous-titres pour la mise en forme-->
+            <div><!--Je divise mon article en plusieurs paragraphes afin d'apporter de la structure et d'aérer mon code-->
+                <h2>Violents incendies au Japon</h2>
+                <img src="image/article-incendie-contenu.jpg" alt="Temple en feu">
+                <p>
+                    Depuis plusieurs semaines, de violents incendies de forêt ravagent le nord-est du Japon, notamment la ville d’Ofunato. 
+                </p>
+                
+                <p> 
+                    La ville avait déjà été détruite par un grand tremblement de terre et le grand tsunami qui avait suivi en 2011. Avec 
+                    cet incendie, plus de 2 900 hectares de forêts et de maisons ont brûlé, forçant 1 200 habitants à fuir. 
+                </p>
+
+                <h3>Des feux incontrolables</h3>
+                <p>
+                    Tout a commencé le 19 février avec un premier incendie, maîtrisé après avoir détruit 400 hectares de forêt. Mais un second, puis un troisième, 
+                    beaucoup plus puissants, se sont déclenchés le 26 février et se sont rapidement propagés à cause de la sécheresse extrême. En février, il n’est 
+                    tombé que 2,5 mm de pluie dans la région, au lieu des 41 mm habituels.
+                </p>
+
+                <p>
+                    La région très escarpée ne favorise pas l’intervention des pompiers. De nombreuses routes ont été fermées. Le retour de la pluie le 5mars a 
+                    ralenti la progression des flammes, mais les autorités restent en alerte. Le sinistre, le pire depuis plus de trente ans, a fait un mort et détruit bien des maisons.  
+                </p>
+            </div>
+
+            <div>
+                <h3>Une intervention massive</h3>
+                <p>
+                    Face à l’urgence, le gouvernement a envoyé 2 000 pompiers et 16 hélicoptères pour tenter d’éteindre les flammes. Malgré leurs efforts, 80 maisons ont été détruites 
+                    et un habitant a perdu la vie. 1 660 foyers ont été privés d’électricité et 840 n’avaient plus d’eau. Heureusement, la pluie a modéré l’incendie, mais le risque de 
+                    reprise reste élevé.
+                </p>
+                <h3>Des habitants en détresse</h3>
+                <p>
+                    Certains habitants vivent cette catastrophe comme une double peine. Ils avaient perdu leur maison et des membres de leur famille lors de la grande catastrophe de 2011. 
+                    Ils s’étaient alors installées en montagne pour être en sécurité, mais aujourd’hui, c’est le feu qui les a chassés. Toutefois, les écoles devraient rouvrir prochainement. 
+                    Les citoyens doivent de nouveau faire face à d’importants dégâts, alors qu’ils s’efforcent toujours de reconstruire leur vie», a regretté le premier ministre japonais, 
+                    Shigeru Ishiba, qui a placé la zone en état de catastrophe naturelle.  
+                </p>
+            </div>
+            <div>
+                <h3>Le climat en cause ?</h3>
+                <p>
+                    Des incendies ont aussi été signalés ailleurs au Japon, souvent causés par l’imprudence humaine. Les experts estiment que le changement climatique ne crée pas ces feux, 
+                    mais qu’il les aggrave. En 2024, la température moyenne du Japon a atteint un record. Avec des étés plus chauds et secs, les grands incendies incontrôlables risquent 
+                    d’être de plus en plus fréquents. Le Japon doit donc mieux s’y préparer pour protéger ses habitants. 
+                </p>
+            </div>
+            <p>Source : <a href="https://www.actuailes.fr/page/3453/terribles-incendies-dans-le-nord-est-du-japon" target="_blank">Actuailes.fr</a></p>
+            <!--J'inclus le lien vers l'article source-->
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>© <span id="annee">2025</span>. Tous droits réservés</li><!--J'utilise le span pour mon JavaScript-->
+                <li>Mentions légales</li>
+                <li>Contact</li>
+                <li>Suivez-nous sur les réseaux</li>   
+                <li>
+                    <a href="https://www.facebook.com/"><img src="image/sans-fond/facebook.svg"></a>
+                    <a href="https://www.instagram.com/"><img src="image/sans-fond/instagram.svg"></a>
+                    <a href="https://x.com/?lang=fr"><img src="image/sans-fond/twitter.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById("annee").textContent = new Date().getFullYear()
+    </script>
+</body>
+
+</html>

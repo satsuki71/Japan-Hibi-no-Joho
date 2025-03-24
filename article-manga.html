@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Japan Hibi no Joho</title>
+    <link rel="stylesheet" href="style/reset.css"><!--Je lie un fichier css qui me permet de reset tous les paramètres de mise en page que le navigateur affiche automatiquement-->
+    <link rel="stylesheet" href="style/style.css"><!--J'ai une fiche de style générale à tous le site-->
+    <link rel="stylesheet" href="style/article-manga.css"><!--Et une fiche de style par page pour diférencier le css de chaque page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--J'importe une police-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <!--En-tête/barre de navigation : le but est d'avoir une barre de navigation avec une barre de recherche-->
+                <img src="image/sans-fond/logo-ss-fond.png" alt="Logo JHJ" class="logo">
+                <div class="navigation">
+                    <p>Japan Hibi no Joho<p> <!--Hibi no Joho  signifie Informations journalières-->
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Acceuil</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li>
+                                <form class="barre-recherche"><!--Ma barre de recherche avec bouton d'envoi des informations-->
+                                <textarea id="recherche" name="recherche" placeholder="Rechercher"></textarea>
+                                <button type="submit"><img src="image/sans-fond/chercher.svg" alt="Logo rechercher"></button>
+                                </from>
+                     
+                            </li>
+                         </ul>
+                    </nav>
+                </div>
+        <!--Ici je veux que l'image soit à cheval entre la barre de navigation et le main, c'est pourquoi je l'ai mise
+         dans mon header (afin qu'elle commence dans ma barre de navigation)-->
+        <img src="image/head-articles.jpeg" alt="Photo Mont Fuji" class="background">
+    </header>
+    
+    <main>
+        <div class="article"><!--J'intègre mon article avec des sous-titres pour la mise en forme-->
+            <div><!--Je divise mon article en plusieurs paragraphes afin d'apporter de la structure et d'aérer mon code-->
+                <h2>Les mangas et la société japonaise</h2>
+                <img src="image/article-manga-contenu2.jpg" alt="Planche Stray dog Volume 4 Chapitre 1">
+                <p>Occupant une partie intégrante de la culture mais aussi de l’économie du pays nippon, ces bandes dessinées ne cessent d’avoir le vent en poupe dans d’autres pays occidentaux. 
+                    Découvrez dans ce qui suit la place qu’occupent ces bandes dessinées dans le pays du soleil levant ainsi que son impact sur la société.
+                </p>
+
+                <h3>Le point de départ de la bande dessinée japonaise</h3>
+                <p> Si les premières estampes ayant donné naissance à la création des mangas avaient été attribué à Katsushika Hokusai, il faut noter que la venue de ces bandes dessinées dans la 
+                    culture nippone ne remonte pas aussi longtemps qu’il paraît. Toutefois, ces cousins des comics américains et des bandes dessinées française font partie intégrante de la culture 
+                    et du quotidien des Japonais.
+                </p>
+
+                <p>
+                    Mais ce n’est que vers le début du 20ème siècle que les premiers magazines mangas ont été édités afin de répondre à l’engouement de toute une génération. La plupart du temps, 
+                    les dessins sont en noire et blanc et leur format de publication sont beaucoup plus petit que celui utilisé par ses homologues occidentaux.
+                </p>
+            </div>
+            <div>
+                <h3>L'importance du manga dans le coeur des Japonais</h3>
+                <p>
+                    Outre son côté populaire et divertissant, le manga même s’il ne constitue qu’une simple bande dessinée est devenu un outil d’évasion et de support moral au Japon. En effet, 
+                    si ces magazines demeurent un véritable soutien psychologique, c’est certainement à cause des différents évènements qui ont marqué l’histoire du pays, à l’instar du tremblement 
+                    de terre de 1923 dans la région de Kantô ou encore des grandes guerres ayant marqué l’esprit de toute la population.
+                </p>
+                <p>Grâce aux mangas publiés par des partisans de la culture Otaku, les Japonais n’ont aucun mal à s’identifier aux personnages qui animent chaque histoire. Cet esprit se reflète 
+                    dans chaque manga publié jusqu’à ce jour, si au départ nous le devons à Osamu Tezuka, le père du manga au Japon.
+                </p>
+            </div>
+            <div>
+                <h3>Le manga pour l'essor de l'économie locale</h3>
+                <p>
+                    La génération de l’après-guerre a contribué à l’essor commercial du manga au Japon. Ces générations sont les premiers consommateurs invétérés de ces magazines aux multiples 
+                    histoires, surtout dans le courant des années 50 jusque dans les années 90. Avec la parution des feuilletons et la sectorisation des magazines par cible, le manga a repris 
+                    des nouvelles bouffées d’oxygène et reste enraciner dans la société nippone jusqu’à ce jour.
+                </p>
+                <p>
+                    Avec la fabrication de produits dérivés inspirés des héros et des personnages de l’univers du manga, ces bandes dessinées n’occupent pas seulement une place importante 
+                    dans la culture du pays mais aussi dans son économie. Ces magazines et illustrations s’inspirent de la société nippone, et la société elle-même s’inspire des faits réels 
+                    qui s’y trouvent dans leur quotidien. Les lecteurs n’auront aucun mal à découvrir les phénomènes de société au Japon rien qu’en lisant les mangas de société.
+                </p>
+            </div>
+            <p>Source : <a href="https://japon-fr.com/place-du-manga-dans-la-societe.htm" target="_blank">Japon-fr.com</a></p>
+            <!--J'inclus le lien vers l'article source-->
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>© <span id="annee">2025</span>. Tous droits réservés</li><!--J'utilise le span pour mon JavaScript-->
+                <li>Mentions légales</li>
+                <li>Contact</li>
+                <li>Suivez-nous sur les réseaux</li>   
+                <li>
+                    <a href="https://www.facebook.com/"><img src="image/sans-fond/facebook.svg"></a>
+                    <a href="https://www.instagram.com/"><img src="image/sans-fond/instagram.svg"></a>
+                    <a href="https://x.com/?lang=fr"><img src="image/sans-fond/twitter.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById("annee").textContent = new Date().getFullYear()
+    </script>
+</body>
+
+</html>

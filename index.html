@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceuil - Japan Hibi no Joho</title>
+    <link rel="stylesheet" href="style/reset.css"><!--Je lie un fichier css qui me permet de reset tous les paramètres de mise en page que le navigateur affiche automatiquement-->
+    <link rel="stylesheet" href="style/style.css"><!--J'ai une fiche de style générale à tous le site-->
+    <link rel="stylesheet" href="style/index.css"><!--Et une fiche de style par page pour diférencier le css de chaque page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--J'importe une police-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+<!--En-tête/barre de navigation : le but est d'avoir une barre de navigation avec une barre de recherche-->
+        <img src="image/sans-fond/logo-ss-fond.png" alt="Logo JHJ" class="logo">
+        <div class="navigation">
+            <p>Japan Hibi no Joho<p> <!--Hibi no Joho  signifie Informations journalières-->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Acceuil</a></li>
+                    <li><a href="articles.html">Articles</a></li>
+                    <li>
+                        <form class="barre-recherche"><!--Ma barre de recherche avec bouton d'envoi des informations-->
+                        <textarea id="recherche" name="recherche" placeholder="Rechercher"></textarea>
+                        <button type="submit"><img src="image/sans-fond/chercher.svg" alt="Logo rechercher"></button>
+                        </from>
+             
+                    </li>
+                 </ul>
+            </nav>
+        </div>       
+
+        <!--Ici je veux que l'image soit à cheval entre la barre de navigation et le main, c'est pourquoi je l'ai mise
+        dans mon header (afin qu'elle commence dans ma barre de navigation)-->
+        <img src="image/head-acceuil.jpeg" alt="Photo Mont Fuji" class="background">
+    </header>
+
+    <main>
+        <!--Je créé mon cadre qui contient mon contenu principal-->
+        <div class="box-acceuil">
+            <h1>Voyagez au Japon à travers<br> l'actualité et<br> la culture japonaise !</h1>
+                <div class="boutons">
+                    <div class="bouton-article"><!--Bouton qui redirige avec les articles-->
+                        <a href="articles.html">Voir les articles</a>
+                    </div>
+                    <div class="bouton-news"><!--Bouton qui redirige vers le formulaire d'inscription à la newsletter-->
+                        <a href="#news">S'inscrire à la newsletter</a><!--Je lie mon bouton à mon formulaire
+                        afin d'être redirigé quand on clique.-->
+                </div>
+            </div>
+        </div>
+
+        <a id="news"><!--J'ajoute un formulaire pour s'inscrire à la newsletter-->
+            <div class="background-news">
+            <div class="box-news">
+            <h1><a id=titre-news>Recevez</a> toutes les informations sur le Japon directement dans votre boite mail !</h1>
+            <form class="form-news"><!--Je divise mon formulaire en div afin de pouvoir mettre en forme comme je souhaite-->
+                <div class="nom-prenom">
+                    <label for="nom">Nom :</label>
+                    <input type="text" id="nom" name="nom">
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom">
+                </div>
+
+                <div class="mail">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email">
+                </div>
+
+                <fieldset><!--J'ajoute un choix à cocher pour que l'utilisateur indique quelles informations il veut recevoir-->
+                    <legend>Quel contenu vous intéresse ?</legend>
+                    <div class="culture">
+                        <label for="label-culture">Culture</label>
+                        <input type="checkbox" id="label-culture" name="contenu">
+                    </div>
+
+                    <div class="actualité">
+                        <label for="label-actualité">Actualités</label>
+                        <input type="checkbox" id="label-actualité" name="actualité">
+                    </div>
+                </fieldset>
+                <button type="submit">S'inscrire à la newsletter</button><!--Un bouton pour envoyer les informations-->
+            </form>
+        </div>
+        <img src="image/head-newsletter.jpeg" alt="Portes Tori" class="image-news">
+        </div>
+        </a>
+        
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>© <span id="annee">2025</span>. Tous droits réservés</li><!--J'utilise le span pour mon JavaScript-->
+                <li>Mentions légales</li>
+                <li>Contact</li>
+                <li>Suivez-nous sur les réseaux</li>   
+                <li>
+                    <a href="https://www.facebook.com/"><img src="image/sans-fond/facebook.svg"></a>
+                    <a href="https://www.instagram.com/"><img src="image/sans-fond/instagram.svg"></a>
+                    <a href="https://x.com/?lang=fr"><img src="image/sans-fond/twitter.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById("annee").textContent = new Date().getFullYear()
+    </script>
+</body>
+</html>

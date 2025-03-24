@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Japan Hibi no Joho</title>
+    <link rel="stylesheet" href="style/reset.css"><!--Je lie un fichier css qui me permet de reset tous les paramètres de mise en page que le navigateur affiche automatiquement-->
+    <link rel="stylesheet" href="style/style.css"><!--J'ai une fiche de style générale à tous le site-->
+    <link rel="stylesheet" href="style/articles.css"><!--Et une fiche de style par page pour diférencier le css de chaque page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--J'importe une police-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <!--En-tête/barre de navigation : le but est d'avoir une barre de navigation avec une barre de recherche-->
+                <img src="image/sans-fond/logo-ss-fond.png" alt="Logo JHJ" class="logo">
+                <div class="navigation">
+                    <p>Japan Hibi no Joho<p> <!--Hibi no Joho  signifie Informations journalières-->
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Acceuil</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li>
+                                <form class="barre-recherche"><!--Ma barre de recherche avec bouton d'envoi des informations-->
+                                <textarea id="recherche" name="recherche" placeholder="Rechercher"></textarea>
+                                <button type="submit"><img src="image/sans-fond/chercher.svg" alt="Logo rechercher"></button>
+                                </from>
+                     
+                            </li>
+                         </ul>
+                    </nav>
+                </div>
+        <!--Ici je veux que l'image soit à cheval entre la barre de navigation et le main, c'est pourquoi je l'ai mise
+         dans mon header (afin qu'elle commence dans ma barre de navigation)-->
+        <img src="image/head-articles.jpeg" alt="Photo Mont Fuji" class="background">
+    </header>
+
+    <main>
+        <div class="article"><!--Je créé une classe principale pour avoir 3 blocss côte à côte-->
+            <div class="travail"><!--Je créé ensuite chacun de mes blocs-->
+                <h2>La fête du travail au Japon</h2>
+                <img src="image/article-travail.jpg" alt="Offrandes à un temple">
+                <p>
+                    La fête du travail ou Kinro Kansha no Hi (勤労感謝の日) est célébrée  le 23 novembre au Japon.
+                     Ce jour de fête nationale est chômé et sert à  remercier les travailleurs pour leur assiduité
+                     dans l'effort de  production du pays. Cette journée permet également de célébrer  Thanksgiving au Japon.<br>
+                    <a href="article-travail.html">Lire l'article</a><!--Lien vers les pages avec les articles complets-->
+                </p>
+                
+            </div>
+
+            <div class="manga">
+                <div class="titre-article">
+                    <h2>Les mangas et la société japonaise</h2>
+                </div>    
+                <!--Je veux avoir mon titre puis en dessous une image et mon texte côte à côte. Je dois donc 
+                séparer mon titre de mon contenu-->
+                <div class="contenu-article"><!--Puis je sépare mon image et mon texte afin de le mettre côte à côte-->
+                    <img src="image/article-manga.webp" alt="Planche chapitre 854 One Piece" class="image-manga">
+
+                    <div class="article-manga">  
+                        <p>
+                             Occupant une partie intégrante de la culture mais aussi de l’économie du pays nippon,
+                            ces bandes dessinées ne cessent d’avoir le vent en poupe  dans d’autres pays occidentaux.
+                            Découvrez dans ce qui suit la place  qu’occupent ces bandes dessinées dans le pays du soleil
+                            levant ainsi que son impact sur la société.<br>
+                            <a href="article-manga.html">Lire l'article</a><!--Lien vers les pages avec les articles complets-->
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+            <div class="incendie"><!--Mon dernier article de cette page-->
+                <h2>Violents icendies au Japon</h2>
+                <img src="image/article-incendie.jpg" alt="Photo d'un feu de forêt">
+                <p>
+                    Depuis plusieurs semaines, de violents incendies de forêt ravagent le nord-est du Japon,
+                     notamment la ville d’Ofunato.<br>
+                    
+                     La ville avait déjà été détruite par un grand tremblement de terre et le  grand tsunami
+                     qui avait suivi en 2011. Avec cet incendie, plus de 2 900  hectares de forêts et de maisons
+                     ont brûlé, forçant 1 200 habitants à  fuir.<br>
+                     <a href="article-incendie.html">Lire l'article</a><!--Lien vers les pages avec les articles complets-->
+                </p>
+                
+            </div>
+
+            <div class="jeu"><!--Mon dernier article de cette page-->
+                <h2>"Assassin's Creed Shadows" fait polémique au Japon</h2>
+                <img src="image/jeu.jpg" alt="Assassin's Creed Shadow">
+                <p>
+                    L'épisode Shadows de la série de jeux vidéo Assassin's Creed, qui sort jeudi 20 mars, ne fait
+                     pas l'unanimité au Japon. Un député japonais a critiqué mercredi 19 mars le nouveau titre en
+                     se plaignant qu'un personnage de samouraï détruit l'intérieur d'un sanctuaire shinto. Shadows,
+                     jeu de la société française Ubisoft, se déroule dans le Japon féodal du XVIe siècle, inspiré 
+                     par des événements historiques réels et des films de samouraïs.<br>
+                     <a href="article-jeu.html">Lire l'article</a><!--Lien vers les pages avec les articles complets-->
+                </p>
+                
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>© <span id="annee">2025</span>. Tous droits réservés</li><!--J'utilise le span pour mon JavaScript-->
+                <li>Mentions légales</li>
+                <li>Contact</li>
+                <li>Suivez-nous sur les réseaux</li>   
+                <li>
+                    <a href="https://www.facebook.com/"><img src="image/sans-fond/facebook.svg"></a>
+                    <a href="https://www.instagram.com/"><img src="image/sans-fond/instagram.svg"></a>
+                    <a href="https://x.com/?lang=fr"><img src="image/sans-fond/twitter.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById("annee").textContent = new Date().getFullYear()
+    </script>
+</body>
+</html>

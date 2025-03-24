@@ -1,0 +1,218 @@
+/* SOMMAIRE :
+1/Paramètres main
+2/ CSS grid
+3/Mise en page commune de l'intérieur de mes articles
+4/Mise en page article-travail
+5/Mise en page article-mangas
+6/Mise en page article-incendie
+7/Mise en page article-jeu*/
+
+
+/* //PARAMETRES MAIN// */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1033px;
+    margin: auto;
+}
+
+/* //CSS GRID : pour mettre en forme mes articles// */
+/*Je définis les paramètres de mon CSS grid*/
+.article {
+    display: grid;
+    grid-template-columns: repeat(2, 500px);
+    grid-template-rows: repeat(3, 530px);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 1033px;
+    gap: 50px;
+}
+
+/* //INTERIEUR DES ARTICLES// */
+.travail,
+.manga,
+.incendie,
+.jeu {
+    border-radius: 5px;
+    background-color: rgba(217,217,217,0.7);
+    padding: 10px;
+    padding-top: 0px;
+}
+
+/*Je mets en forme mon titre et mes paragraphes*/
+h2 {
+    font-family: Oswald;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.travail p,
+.manga p,
+.incendie p,
+.jeu p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    text-align: left;
+    max-width: 900px;
+}
+
+/*Puis mes liens*/
+main a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: black;
+    display: flex;
+    justify-content: end;
+    padding-top: 20px;
+}
+
+/* //ARTICLE TRAVAIL// */
+/*J'indique la position de mon article dans ma grid*/
+.travail {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Je mets en forme l'image de l'article*/
+.travail img {
+    object-fit: cover;
+    width: 600px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* //ARTICLE MANGA// */
+/*J'indique la position de mon article dans ma grid*/
+.manga {
+    grid-column: 1 / 2;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*J'utilise une flexbox pour mettre mon image à coté de mon texte*/
+.contenu-article {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding-top: 15px;
+}
+
+.article-manga p {
+    width: 252px;
+    height: 300px;
+}
+
+/*Je mets en forme l'image de l'article*/
+.image-manga {
+    object-fit: cover;
+    width: 159px;
+    padding-top: 30px;
+}
+
+
+/* ARTICLE INCENDIE// */
+/*J'indique la position de mon article dans ma grid*/
+.incendie {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Je mets en forme l'image de l'article*/
+.incendie img {
+    object-fit: cover;
+    width: 280px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*J'aère mon paragraphe et mon lien*/
+.incendie p {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.incendie a {
+    padding-bottom: 5px;
+}
+
+
+/* //ARTICLE JEU// */
+/*J'indique la position de mon article dans ma grid*/
+.jeu {
+    grid-column: 1 / 3;
+    grid-row: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*Je mets en forme l'image de l'article*/
+.jeu img {
+    width: 400px;
+    object-fit: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/* //MEDIA QUERIES TABLETTES ET TELEPHONES// */
+/*La disposition ne change pas vraiment selon si c'est un écran de tablette ou de téléphone
+donc j'adapte à tous les écrans inférieurs à 1024px*/
+@media screen and (max-width: 1024px) {
+    main {
+        width: 95%;
+        padding: 0 20px;
+    }
+  
+    .article { /*Je change la disposition de ma grid*/
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 95%;
+    }
+  
+    .travail,
+    .manga,
+    .incendie,
+    .jeu { /*Je demande à mes articles de se placer comme ils peuvent dans la grid*/
+        grid-column: auto;
+        grid-row: auto;
+    }
+  
+    .travail img,
+    .incendie img,
+    .jeu img {
+        width: 95%;
+        max-width: 95%;
+    }
+  
+    .contenu-article {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+  
+    .article-manga p,
+    .image-manga {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .article p {
+        font-size: 16px;
+    }
+
+    .article h2 {
+        font-size: 30px;
+    }
+}

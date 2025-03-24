@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles - Japan Hibi no Joho</title>
+    <link rel="stylesheet" href="style/reset.css"><!--Je lie un fichier css qui me permet de reset tous les paramètres de mise en page que le navigateur affiche automatiquement-->
+    <link rel="stylesheet" href="style/style.css"><!--J'ai une fiche de style générale à tous le site-->
+    <link rel="stylesheet" href="style/article-jeu.css"><!--Et une fiche de style par page pour diférencier le css de chaque page-->
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!--J'importe une police-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <!--En-tête/barre de navigation : le but est d'avoir une barre de navigation avec une barre de recherche-->
+                <img src="image/sans-fond/logo-ss-fond.png" alt="Logo JHJ" class="logo">
+                <div class="navigation">
+                    <p>Japan Hibi no Joho<p> <!--Hibi no Joho  signifie Informations journalières-->
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Acceuil</a></li>
+                            <li><a href="articles.html">Articles</a></li>
+                            <li>
+                                <form class="barre-recherche"><!--Ma barre de recherche avec bouton d'envoi des informations-->
+                                <textarea id="recherche" name="recherche" placeholder="Rechercher"></textarea>
+                                <button type="submit"><img src="image/sans-fond/chercher.svg" alt="Logo rechercher"></button>
+                                </from>
+                     
+                            </li>
+                         </ul>
+                    </nav>
+                </div>
+        <!--Ici je veux que l'image soit à cheval entre la barre de navigation et le main, c'est pourquoi je l'ai mise
+         dans mon header (afin qu'elle commence dans ma barre de navigation)-->
+        <img src="image/head-articles.jpeg" alt="Photo Mont Fuji" class="background">
+    </header>
+    
+    <main>
+        <div class="article"><!--J'intègre mon article avec des sous-titres pour la mise en forme-->
+            <div><!--Je divise mon article en plusieurs paragraphes afin d'apporter de la structure et d'aérer mon code-->
+                <h2>"Assassin's Creed Shadows" fait polémique au Japon</h2>
+                <img src="image/article-jeu-contenu.jpg" alt="Assassin's Creed Shadows">
+                <p>
+                    L'épisode Shadows de la série de jeux vidéo Assassin's Creed, qui sort jeudi 20 mars, ne fait pas l'unanimité au Japon. Un député japonais a critiqué mercredi 19 mars 
+                    le nouveau titre en se plaignant qu'un personnage de samouraï détruit l'intérieur d'un sanctuaire shinto. Shadows, jeu de la société française Ubisoft, se déroule dans 
+                    le Japon féodal du XVIe siècle, inspiré par des événements historiques réels et des films de samouraïs.
+                </p>
+                
+                <p> 
+                    Mais une vidéo du jeu diffusée sur YouTube montre un personnage tirant à l'arc vers des prêtres et détruisant un tambour traditionnel et un autel. La réaction ne s'est 
+                    pas fait attendre à Tokyo. "Il est important de traiter la culture avec respect", a déclaré au Parlement Hiroyuki Kada, membre du Parti libéral-démocrate, la formation 
+                    conservatrice au pouvoir. "Je suis préoccupé par le fait que les attaques et les actes de destruction dans le jeu puissent conduire à des comportements de nuisance 
+                    similaires dans le monde réel", a déclaré le député.
+                </p>
+
+                <p>
+                    Le député a également critiqué le créateur de jeux français pour avoir utilisé un sanctuaire qui existe réellement dans sa circonscription de la région de Hyogo (ouest), 
+                    sans obtenir la permission du sanctuaire lui-même.
+                </p>
+            </div>
+
+            <div>
+                <h3>Être ou ne pas être samouraï</h3>
+                <p>
+                    Shadows a déjà suscité un vif débat en ligne à cause de l'un des deux protagonistes jouables, Yasuke, un personnage noir au service du seigneur de guerre Oda Nobunaga, 
+                    doté du statut de samouraï. "Le parti pris du jeu, c'est de dire qu'il était samouraï", explique Pierre-François Souyri, historien spécialiste du Japon et consultant 
+                    sur le jeu Ubisoft. "C'est un personnage qui a réellement existé", insiste le spécialiste, "mais les textes dans lesquels il est mentionné nous disent des choses parfois 
+                    difficiles à interpréter."
+                </p>
+
+                <p>
+                    À l'inverse, Yuichi Goza, professeur adjoint au Centre national de recherche pour les études japonaises à Kyoto, estime que "rien ne prouve que Yasuke possédait de telles 
+                    compétences" de samouraï. "Yasuke se distinguait surtout par sa couleur de peau et sa force physique", assure ce spécialiste du Japon médiéval, jugeant probable que 
+                    "(le seigneur de guerre) Oda Nobunaga ait gardé Yasuke à ses côtés pour en faire un spectacle".  
+                </p>
+            </div>
+            <div>
+                <p>
+                    Dans l'archipel, une pétition contre la représentation du personnage de samouraï a recueilli plus de 100 000 signatures. Le texte de la pétition a critiqué un "manque 
+                    d'exactitude historique et de respect culturel" de la part des développeurs du jeu. À l'instar du député conservateur Hiroyuki Kada, des Japonais ont déjà exprimé leur 
+                    colère quant au fait que les joueurs puissent avoir la possibilité de détruire l'intérieur de sanctuaires.
+                </p>
+
+                <p>
+                    Si la série a déjà été critiquée dans le passé, c'est la première fois qu'elle fait face à des critiques aussi virulentes avant même la sortie d'un opus.
+                </p>
+            </div>
+            <p>Source : <a href="https://www.francetvinfo.fr/culture/jeux-video/shadows-le-dernier-opus-du-jeu-video-assassin-s-creed-fait-polemique-au-japon_7139418.html" target="_blank">France Info</a></p>
+            <!--J'inclus le lien vers l'article source-->
+        </div>
+    </main>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>© <span id="annee">2025</span>. Tous droits réservés</li><!--J'utilise le span pour mon JavaScript-->
+                <li>Mentions légales</li>
+                <li>Contact</li>
+                <li>Suivez-nous sur les réseaux</li>   
+                <li>
+                    <a href="https://www.facebook.com/"><img src="image/sans-fond/facebook.svg"></a>
+                    <a href="https://www.instagram.com/"><img src="image/sans-fond/instagram.svg"></a>
+                    <a href="https://x.com/?lang=fr"><img src="image/sans-fond/twitter.svg"></a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        document.getElementById("annee").textContent = new Date().getFullYear()
+    </script>
+</body>
+
+</html>
