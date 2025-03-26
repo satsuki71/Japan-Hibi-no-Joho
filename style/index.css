@@ -1,10 +1,10 @@
 /* SOMMAIRE : 
-1/ Mise en page box d'acceuil
+1/ Mise en page box d'accueil
 2/ Mise en page formulaire
 3/ Media queries tablettes
 4/ Media queries téléphones*/
 
-/* //BOX D'ACCEUIL// */
+/* //BOX D'ACCUEIL// */
 main {
     display: flex;
     flex-direction: column;
@@ -16,21 +16,23 @@ main {
 
 /*Je créé mon encadré central que je laisse en partie 
 en transparence afin que l'on voit l'image en-dessous.*/
-.box-acceuil {
+.box-accueil {
     border-radius: 5px;
-    background-color: rgba(217,217,217,0.5);
+    background-color: rgba(217,217,217,0.7);
     display: flex;
     flex-direction: column;
     align-items: center;
     max-width: 1033px;
-    height: 464px;
+    max-height: 464px;
+    margin-top: clamp(0.5rem 12vw 150px);
     padding-top: 50px;
     padding-left: 68px;
     padding-right: 68px;
+    padding-bottom: 50px;
 }
 
 /*Je mets en forme mon titre*/
-.box-acceuil h1 {
+.box-accueil h1 {
     text-align: center;
     font-family: Oswald, sans-serif;
     font-size: 64px;
@@ -48,7 +50,7 @@ en transparence afin que l'on voit l'image en-dessous.*/
 .bouton-article,
 .bouton-news {
     border-radius: 5px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,1);
     width: 400px;
     height: 70px;
     display: flex;
@@ -70,17 +72,19 @@ et pas avec .bouton sinon les 2 boutons se foncent quand la souris passe au
 dessus d'un.*/
 .bouton-article:hover {
     background-color: #D9D9D9;
+    cursor: pointer;
 }
 
 .bouton-news:hover {
     background-color: #D9D9D9;
+    cursor: pointer;
 }
 
 
 /* //FORMULAIRE// */
 .box-news {
     border-radius: 5px;
-    background-color: rgba(217,217,217,0.5);
+    background-color: rgba(217,217,217,0.9);
     display: flex;
     flex-direction: column;
     justify-content: top;
@@ -136,7 +140,7 @@ fieldset {
 /*Je mets en forme mon bouton d'envoi*/
 button {
     border-radius: 5px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(253, 107, 4, 0.5);
     width: 400px;
     height: 70px;
     display: flex;
@@ -149,7 +153,8 @@ button {
 }
 
 button:hover {
-    background-color: #D9D9D9
+    background-color: rgba(253, 107, 4, 1);
+    cursor: pointer;
 }
 
 .background-news {
@@ -169,7 +174,7 @@ button:hover {
 
 /* //MEDIA QUERIES TABLETTES// */
 @media screen and (min-width: 600px) and (max-width: 1024px) {
-    .box-acceuil h1 {
+    .box-accueil h1 {
         font-size: 36px;
     }
   
@@ -205,7 +210,7 @@ button:hover {
   
 /* //MEDIA QUERIES TELEPHONES// */
 @media screen and (max-width: 600px) {
-    .box-acceuil h1 {
+    .box-accueil h1 {
         font-size: 28px;
     }
   

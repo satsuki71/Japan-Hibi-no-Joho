@@ -28,7 +28,8 @@ main {
 }
 
 .article p {
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 1.3;
     padding : 10px;
 }
 
@@ -64,12 +65,13 @@ main {
 }
 
 /* //MEDIA QUERIES TABLETTES// */
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 800px) and (max-width: 1024px) {
     .article {
         max-width: 90%;
         padding: 20px;
         padding-left: 20px;
         padding-right: 20px;
+        margin-inline: 50px;
     }
   
     .article h2 {
@@ -85,11 +87,12 @@ main {
     }
 }
   
-/* //MEDIA QUERIES TABLETTES// */
-@media screen and (max-width: 600px) {
+/* //MEDIA QUERIES TELEPHONE// */
+@media screen and (max-width: 800px) {
     .article {
         width: 95%;
         padding: 15px;
+        margin-inline: 50px;
     }
   
     .article h2 {
@@ -110,3 +113,5 @@ main {
         max-width: 100%;
     }
 }
+
+/*Je mets 800px en taille max où cela change car c'est la taille de mon cadre d'article*/

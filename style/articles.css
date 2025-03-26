@@ -35,7 +35,7 @@ main {
 .incendie,
 .jeu {
     border-radius: 5px;
-    background-color: rgba(217,217,217,0.7);
+    background-color: rgba(217,217,217,0.9);
     padding: 10px;
     padding-top: 0px;
 }
@@ -113,8 +113,7 @@ main a {
 /*Je mets en forme l'image de l'article*/
 .image-manga {
     object-fit: cover;
-    width: 159px;
-    padding-top: 30px;
+    max-width: 159px;
 }
 
 
@@ -195,16 +194,17 @@ donc j'adapte à tous les écrans inférieurs à 1024px*/
         max-width: 95%;
     }
   
-    .contenu-article {
-        flex-direction: column;
-        align-items: center;
-        gap: 20px;
+    .article-manga {
+        height: 95%;
     }
-  
-    .article-manga p,
+
+    .article-manga p {
+        max-width: 190px;
+    }
+
     .image-manga {
         width: 100%;
-        max-width: 100%;
+        max-width: 159px;
         height: auto;
     }
 
